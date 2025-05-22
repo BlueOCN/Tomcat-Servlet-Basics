@@ -1,0 +1,50 @@
+# Ignore logs and temporary files
+logs/
+temp/
+work/
+
+# Ignore compiled Java files
+*.class
+*.jar
+*.war
+
+# Ignore IDE-specific files (IntelliJ IDEA)
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Ignore Maven and Gradle build files
+target/
+build/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore Tomcat-specific files
+conf/
+webapps/
+bin/
+lib/
+tomcat/
+
+# IntelliJ IDEA-specific exclusions
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+.idea/**/dataSources/
+.idea/**/libraries
+.idea/**/httpRequests
+.idea/caches/
+.idea/modules.xml
+.idea/artifacts/
+.idea/compiler.xml
+.idea/jarRepositories.xml
+.idea/modules/
+.idea/*.iml
+.idea/modules/
+*.iml
+*.ipr

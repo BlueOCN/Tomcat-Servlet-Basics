@@ -45,6 +45,9 @@ tomcat/
 .idea/jarRepositories.xml
 .idea/modules/
 .idea/*.iml
-.idea/modules/
-*.iml
-*.ipr
+
+# Ignore env variables
+.dev.env
+*.env
+.*.env
+**/*.env

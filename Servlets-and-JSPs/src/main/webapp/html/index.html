@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple E-Commerce</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1>Welcome to Our Store</h1>
+    <nav>
+        <ul>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Search Section -->
+<section>
+    <h2>Find Your Product</h2>
+    <form action="searchServlet" method="GET">
+        <label for="search">Search for a product:</label>
+        <input type="text" id="search" name="query" placeholder="Enter product name">
+        <button type="submit">Search</button>
+    </form>
+</section>
+
+<section>
+    <h2>Featured Products</h2>
+    <div class="product">
+        <img src="images/product1.jpg" alt="Product 1">
+        <p>Awesome Gadget - $19.99</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="images/product2.jpg" alt="Product 2">
+        <p>Cool Accessory - $14.99</p>
+        <button>Add to Cart</button>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 My E-Commerce Store</p>
+</footer>
+</body>
+</html>

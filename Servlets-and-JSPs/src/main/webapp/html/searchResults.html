@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="searchResults.css">
+</head>
+<body>
+<header>
+    <h1>Search Results</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section>
+    <h2>Matching Products</h2>
+    <div id="results">
+        <!-- Products will be dynamically added here -->
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 My E-Commerce Store</p>
+</footer>
+
+<script>
+    // Fetch search query from the URL
+    const params = new URLSearchParams(window.location.search);
+    const searchQuery = params.get('query');
+
+    // Example product data
+    const products = [
+        { name: "Smartphone", price: "$499", img: "images/smartphone.jpg" },
+        { name: "Headphones", price: "$99", img: "images/headphones.jpg" },
+        { name: "Smartwatch", price: "$199", img: "images/smartwatch.jpg" }
+    ];
+
+    // Filter products based on search query
+    const resultsContainer = document.getElementById("results");
+    const filteredProducts = products.filter(product => product.name.toLowerCase().includes(searchQuery.toLowerCase()));
+
+    if (filteredProducts.length > 0) {
+        filteredProducts.forEach(product => {
+            const productDiv = document.createElement("div");
+            productDiv.classList.add("product");
+            productDiv.innerHTML = `
+                <img src="${product.img}" alt="${product.name}">
+                <p>${product.name} - ${product.price}</p>
+                <button onclick="addToCart('${product.name}')">Add to Cart</button>
+            `;
+            resultsContainer.appendChild(productDiv);
+        });
+    } else {
+        resultsContainer.innerHTML = "<p>No matching products found.</p>";
+    }
+
+    function addToCart(productName) {
+        alert(productName + " added to cart!");
+    }
+</script>
+</body>
+</html>
